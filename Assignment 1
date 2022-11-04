@@ -1,0 +1,22 @@
+#python progfam to find REF
+import sympy
+import numpy as np
+  
+r = int(input("Enter the number of rows:"))
+C = int(input("Enter the number of columns:"))
+matrix = []
+print("Enter the entries row wise:")
+for i in range(r):    
+    a =[]
+    for j in range(C):     
+         a.append(int(input()))
+    matrix.append(a)
+print("Your entered  matrix:")
+for i in range(r):
+    for j in range(C):
+        print(matrix[i][j], end = " ")
+    print()
+
+print("RREF Form:")
+print(sympy.Matrix(matrix).rref())
+
